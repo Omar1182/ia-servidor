@@ -1,0 +1,47 @@
+﻿# DEPENDENCIAS
+node_modules/
+
+# VARIABLES Y CLAVES PRIVADAS
+.env
+.env.*
+!.env.example
+
+# CLAVES Y CERTIFICADOS
+*.pem
+*.key
+*.p12
+*.pfx
+cert.pem
+credentials.json
+secrets.json
+
+# REGISTROS
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ARCHIVOS TEMPORALES
+tmp/
+temp/
+.cache/
+
+# SISTEMA OPERATIVO
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# EDITORES
+.vscode/
+.idea/
+
+# COPIAS DE SEGURIDAD
+*.bak
+*.backup
+*.old
+
+# BASES DE DATOS Y VOLCADOS
+*.sqlite
+*.sqlite3
+*.sql

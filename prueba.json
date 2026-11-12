@@ -1,0 +1,9 @@
+﻿{
+    "modelo":  "chat",
+    "mensajes":  [
+                     {
+                         "content":  "Hola, ¿puedes confirmar que estás funcionando correctamente?",
+                         "role":  "user"
+                     }
+                 ]
+}
