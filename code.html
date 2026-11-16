@@ -1,4 +1,3 @@
-html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,76 +13,69 @@ html
             <ul>
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#autos">Autos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h2>Bienvenido a nuestra tienda de autos</h2>
-        <p>Encuentra tus autos favoritos aquí.</p>
+    <section id="home" class="hero">
+        <h2>Encuentra tu próximo auto</h2>
+        <p>Descubre nuestra amplia selección de autos de alta calidad</p>
     </section>
 
-    <section id="autos">
-        <h2>Nuestros Autos</h2>
-        <div class="car-container">
-            <div class="car">
-                <img src="auto1.jpg" alt="Auto 1">
-                <h3>Auto 1</h3>
-                <p>Descripción del auto 1.</p>
-                <button>Añadir al Carro</button>
-            </div>
-            <div class="car">
-                <img src="auto2.jpg" alt="Auto 2">
-                <h3>Auto 2</h3>
-                <p>Descripción del auto 2.</p>
-                <button>Añadir al Carro</button>
-            </div>
-            <!-- Añade más autos aquí -->
+    <section id="autos" class="auto-list">
+        <h2>Nuestros Autos Destacados</h2>
+        <div class="auto-card">
+            <img src="car1.jpg" alt="Auto 1">
+            <h3>Modelo A</h3>
+            <p>Descripción del auto 1</p>
+            <a href="#" class="btn">Ver Más</a>
+        </div>
+        <div class="auto-card">
+            <img src="car2.jpg" alt="Auto 2">
+            <h3>Modelo B</h3>
+            <p>Descripción del auto 2</p>
+            <a href="#" class="btn">Ver Más</a>
+        </div>
+        <div class="auto-card">
+            <img src="car3.jpg" alt="Auto 3">
+            <h3>Modelo C</h3>
+            <p>Descripción del auto 3</p>
+            <a href="#" class="btn">Ver Más</a>
         </div>
     </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Contáctanos para más información.</p>
-        <form>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <footer>
+    <footer id="contact">
         <p>&copy; 2023 Venta de Autos. Todos los derechos reservados.</p>
     </footer>
 </body>
-
 <style>
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1em 0;
     text-align: center;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin: 0 1em;
 }
 
 nav ul li a {
@@ -91,34 +83,57 @@ nav ul li a {
     text-decoration: none;
 }
 
-section {
-    padding: 2rem;
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
 }
 
-.car-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.auto-list {
+    padding: 2em 0;
+    background: #fff;
+    margin: 1em 0;
 }
 
-.car {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem;
+.auto-card {
+    border: 1px solid #ddd;
+    margin: 1em;
+    padding: 1em;
     text-align: center;
 }
 
-.car img {
-    width: 100%;
-    max-width: 300px;
+.auto-card img {
+    max-width: 100%;
     height: auto;
+}
+
+.auto-card h3 {
+    margin-top: 0.5em;
+}
+
+.auto-card p {
+    margin-bottom: 1em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1em 0;
     position: fixed;
     bottom: 0;
     width: 100%;
